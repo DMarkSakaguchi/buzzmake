@@ -1,0 +1,25 @@
+<h1>メンバー一覧</h1>
+<table>
+<tr>
+<th>コード</th>
+<th>メンバーID</th>
+<th>会員名</th>
+<th>会社名</th>
+<th>mail</th>
+<th>password</th>
+<th>備考</th>
+<th>変更日</th>
+</tr>
+@foreach($member_conts as $member)
+<tr>
+<td>{{$member->code}}</td>
+<td>{{$member->member_id}}</td>
+<td>{{$member->member_name}}</td>
+<td>{{$member->corp_name}}</td>
+<td>{{$member->mail}}</td>
+<td>{{$member->password}}</td>
+<td>{{$member->remark}}</td>
+<td>{{$member->updated_at}}</td>
+</tr>
+@endforeach
+</table>
